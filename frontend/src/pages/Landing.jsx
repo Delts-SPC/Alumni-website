@@ -8,10 +8,12 @@ import Footer from "@/components/landing/Footer";
 
 const HERO_IMG =
   "https://images.unsplash.com/photo-1755474897404-006834b70103?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwyfHxnbGFzcyUyMG9mZmljZSUyMGJ1aWxkaW5nJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzc3ODYwNjQ2fDA&ixlib=rb-4.1.0&q=85";
+const VOICE_IMG =
+  "https://images.unsplash.com/photo-1758691736975-9f7f643d178e?fm=jpg&q=85&w=1200&fit=crop";
 const CHALLENGE_IMG =
-  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200";
+  "https://images.unsplash.com/photo-1677594332964-b1199e6e7928?fm=jpg&q=85&w=1200&fit=crop";
 const EXPERTISE_IMG =
-  "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200";
+  "https://images.unsplash.com/photo-1754531976828-69e42ce4e0d9?fm=jpg&q=85&w=1200&fit=crop";
 
 const PILLARS = [
   {
@@ -141,55 +143,63 @@ export default function Landing() {
         className="bg-slate-50 border-y border-slate-200 py-24 md:py-32"
         data-testid="voice-section"
       >
-        <div className="max-w-3xl mx-auto px-6 md:px-12">
-          <h2 className="font-serif text-3xl md:text-5xl tracking-tight text-slate-900 leading-tight mb-8">
-            This is about where you are right now.
-          </h2>
-          <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-6">
-            Most of us are navigating something. And most of the time, we're figuring it out alone.
-          </p>
-          <ul className="text-base md:text-lg text-slate-700 leading-relaxed mb-10 space-y-1">
-            <li>No structure.</li>
-            <li>No real support.</li>
-            <li>No place to talk about it with people who actually understand.</li>
-          </ul>
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 grid md:grid-cols-12 gap-12 items-center">
+          <div className="md:col-span-5">
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#6B2C91]" aria-hidden="true" />
+              <img
+                src={VOICE_IMG}
+                alt="A diverse group of professional men in conversation"
+                className="relative w-full h-[460px] object-cover"
+              />
+            </div>
+          </div>
+          <div className="md:col-span-7 md:pl-8 lg:pl-12">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight text-slate-900 leading-tight mb-6">
+              This is about where you are right now.
+            </h2>
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-3">
+              Most of us are navigating something. And most of the time, we're figuring it out alone.
+            </p>
+            <ul className="text-base md:text-lg text-slate-700 leading-relaxed mb-6 space-y-0.5">
+              <li>No structure.</li>
+              <li>No real support.</li>
+              <li>No place to talk about it with people who actually understand.</li>
+            </ul>
 
-          <div className="border-t border-slate-200 my-10" aria-hidden="true" />
+            <h3 className="font-serif text-xl md:text-2xl text-slate-900 leading-tight mt-8 mb-3">
+              What if that changed?
+            </h3>
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-2">
+              We're building something new.
+            </p>
+            <ul className="text-base md:text-lg text-slate-700 leading-relaxed mb-3 space-y-0.5">
+              <li>Not events.</li>
+              <li>Not networking.</li>
+              <li>Not another ask.</li>
+            </ul>
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-2">
+              Something designed to help you move forward in what actually matters right now.
+            </p>
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-8">
+              But before we build anything, we need to understand where you are.
+            </p>
 
-          <h3 className="font-serif text-2xl md:text-3xl text-slate-900 leading-tight mb-6">
-            What if that changed?
-          </h3>
-          <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-2">
-            We're building something new.
-          </p>
-          <ul className="text-base md:text-lg text-slate-700 leading-relaxed mb-6 space-y-1">
-            <li>Not events.</li>
-            <li>Not networking.</li>
-            <li>Not another ask.</li>
-          </ul>
-          <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-6">
-            Something designed to help you move forward in what actually matters right now.
-          </p>
-          <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-10">
-            But before we build anything, we need to understand where you are.
-          </p>
+            <h3 className="font-serif text-xl md:text-2xl text-slate-900 leading-tight mb-2">
+              Take 2 minutes. Tell us what you're navigating.
+            </h3>
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-8">
+              Your input will directly shape what gets built.
+            </p>
 
-          <div className="border-t border-slate-200 my-10" aria-hidden="true" />
-
-          <h3 className="font-serif text-2xl md:text-3xl text-slate-900 leading-tight mb-4">
-            Take 2 minutes. Tell us what you're navigating.
-          </h3>
-          <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-10">
-            Your input will directly shape what gets built.
-          </p>
-
-          <Button
-            onClick={() => setVoiceOpen(true)}
-            className="bg-[#6B2C91] hover:bg-[#562374] text-white px-8 py-6 rounded-sm text-base"
-            data-testid="voice-cta"
-          >
-            Start here <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+            <Button
+              onClick={() => setVoiceOpen(true)}
+              className="bg-[#6B2C91] hover:bg-[#562374] text-white px-8 py-6 rounded-sm text-base"
+              data-testid="voice-cta"
+            >
+              Start here <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
         </div>
       </section>
 
