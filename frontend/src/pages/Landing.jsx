@@ -158,29 +158,17 @@ export default function Landing() {
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight text-slate-900 leading-tight mb-6">
               This is about where you are right now.
             </h2>
-            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-3">
-              Most of us are navigating something. And most of the time, we're figuring it out alone.
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-6">
+              Most of us are navigating something. Often, we're figuring it out alone — no
+              structure, no real support, no place to talk about it with people who actually
+              understand.
             </p>
-            <ul className="text-base md:text-lg text-slate-700 leading-relaxed mb-6 space-y-0.5">
-              <li>No structure.</li>
-              <li>No real support.</li>
-              <li>No place to talk about it with people who actually understand.</li>
-            </ul>
 
-            <h3 className="font-serif text-xl md:text-2xl text-slate-900 leading-tight mt-8 mb-3">
-              What if that changed?
-            </h3>
-            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-2">
-              We're building something new.
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-6">
+              What if that changed? We're building programs designed to help you move forward
+              in what actually matters right now.
             </p>
-            <ul className="text-base md:text-lg text-slate-700 leading-relaxed mb-3 space-y-0.5">
-              <li>Not events.</li>
-              <li>Not networking.</li>
-              <li>Not another ask.</li>
-            </ul>
-            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-2">
-              Something designed to help you move forward in what actually matters right now.
-            </p>
+
             <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-8">
               But before we build anything, we need to understand where you are.
             </p>
