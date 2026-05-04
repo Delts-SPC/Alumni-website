@@ -128,11 +128,6 @@ export default function Landing() {
                 Make my voice matter
               </Button>
             </div>
-            <div className="flex items-center gap-2 mt-10 text-xs text-slate-500">
-              <ShieldCheck className="h-4 w-4 text-[#6B2C91]" />
-              Your information is used only for this initiative — never shared with the
-              fraternity or foundation unless you opt in.
-            </div>
           </div>
         </div>
       </section>
