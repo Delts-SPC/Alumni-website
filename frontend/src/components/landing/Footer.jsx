@@ -21,8 +21,9 @@ export default function Footer() {
           <div className="md:text-right text-sm text-slate-400 space-y-2">
             <p>An independent, alumnus-led initiative.</p>
             <p>
-              Your information is used only for this initiative — never shared with
-              the fraternity or foundation unless you explicitly opt in.
+              Your information is used only for this initiative.
+              <br />             
+              Only shared with the fraternity or foundation when you choose.
             </p>
           </div>
         </div>
