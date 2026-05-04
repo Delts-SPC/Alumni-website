@@ -28,7 +28,6 @@ export default function Footer() {
         </div>
         <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between gap-4 text-xs text-slate-500">
           <span>© {new Date().getFullYear()} Delt Alumni Excellence Center</span>
-          <span>Phase 1 — Building demand. Listening first.</span>
         </div>
       </div>
     </footer>

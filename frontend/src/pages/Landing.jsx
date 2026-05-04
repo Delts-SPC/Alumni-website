@@ -9,9 +9,9 @@ import Footer from "@/components/landing/Footer";
 const HERO_IMG =
   "https://images.unsplash.com/photo-1755474897404-006834b70103?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwyfHxnbGFzcyUyMG9mZmljZSUyMGJ1aWxkaW5nJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzc3ODYwNjQ2fDA&ixlib=rb-4.1.0&q=85";
 const CHALLENGE_IMG =
-  "https://images.unsplash.com/photo-1739285452621-59d92842fcc8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBtZW4lMjBtZWV0aW5nJTIwb2ZmaWNlfGVufDB8fHx8MTc3Nzg2MDY0MHww&ixlib=rb-4.1.0&q=85";
+  "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200";
 const EXPERTISE_IMG =
-  "https://images.unsplash.com/photo-1758519288955-1b3b45209c7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBtZW4lMjBtZWV0aW5nJTIwb2ZmaWNlfGVufDB8fHx8MTc3Nzg2MDY0MHww&ixlib=rb-4.1.0&q=85";
+  "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&q=85&w=1200";
 
 const PILLARS = [
   {
@@ -141,23 +141,54 @@ export default function Landing() {
         className="bg-slate-50 border-y border-slate-200 py-24 md:py-32"
         data-testid="voice-section"
       >
-        <div className="max-w-3xl mx-auto px-6 md:px-12 text-center">
-          <p className="text-xs tracking-[0.25em] uppercase text-[#6B2C91] font-semibold mb-6">
-            Phase 1 — Listening first
-          </p>
-          <h2 className="font-serif text-3xl md:text-5xl tracking-tight text-slate-900 leading-tight mb-6">
-            We want to hear from you. Help shape our programs.
+        <div className="max-w-3xl mx-auto px-6 md:px-12">
+          <h2 className="font-serif text-3xl md:text-5xl tracking-tight text-slate-900 leading-tight mb-8">
+            This is about where you are right now.
           </h2>
-          <p className="text-base md:text-lg text-slate-600 leading-relaxed mb-10">
-            Before we build, we listen. A short, structured conversation about where you are and
-            what you're navigating — so what we build is genuinely useful to Brothers like you.
+          <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-6">
+            Most of us are navigating something. And most of the time, we're figuring it out alone.
           </p>
+          <ul className="text-base md:text-lg text-slate-700 leading-relaxed mb-10 space-y-1">
+            <li>No structure.</li>
+            <li>No real support.</li>
+            <li>No place to talk about it with people who actually understand.</li>
+          </ul>
+
+          <div className="border-t border-slate-200 my-10" aria-hidden="true" />
+
+          <h3 className="font-serif text-2xl md:text-3xl text-slate-900 leading-tight mb-6">
+            What if that changed?
+          </h3>
+          <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-2">
+            We're building something new.
+          </p>
+          <ul className="text-base md:text-lg text-slate-700 leading-relaxed mb-6 space-y-1">
+            <li>Not events.</li>
+            <li>Not networking.</li>
+            <li>Not another ask.</li>
+          </ul>
+          <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-6">
+            Something designed to help you move forward in what actually matters right now.
+          </p>
+          <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-10">
+            But before we build anything, we need to understand where you are.
+          </p>
+
+          <div className="border-t border-slate-200 my-10" aria-hidden="true" />
+
+          <h3 className="font-serif text-2xl md:text-3xl text-slate-900 leading-tight mb-4">
+            Take 2 minutes. Tell us what you're navigating.
+          </h3>
+          <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-10">
+            Your input will directly shape what gets built.
+          </p>
+
           <Button
             onClick={() => setVoiceOpen(true)}
             className="bg-[#6B2C91] hover:bg-[#562374] text-white px-8 py-6 rounded-sm text-base"
             data-testid="voice-cta"
           >
-            Make my voice matter <ArrowRight className="ml-2 h-4 w-4" />
+            Start here <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
       </section>
