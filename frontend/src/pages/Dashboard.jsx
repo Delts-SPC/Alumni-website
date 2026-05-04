@@ -227,7 +227,12 @@ export default function Dashboard() {
     setLoading(true);
     try {
       const results = await Promise.all(
-        TABS.map((t) => fetchTable(t.key).catch(() => []))
+        TABS.map((t) =>
+          fetchTable(t.key).catch((e) => {
+            console.warn(`Failed to load ${t.key}:`, e?.message || e);
+            return [];
+          })
+        )
       );
       const next = {};
       TABS.forEach((t, i) => {

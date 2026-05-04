@@ -70,10 +70,11 @@ export async function submitExpertise(alumniId, payload) {
 
 // Admin reads
 export async function fetchTable(table, { limit = 500 } = {}) {
+  const orderCol = table === "consent" ? "timestamp" : "created_at";
   const { data, error } = await supabase
     .from(table)
     .select("*")
-    .order("created_at", { ascending: false })
+    .order(orderCol, { ascending: false })
     .limit(limit);
   if (error) throw error;
   return data || [];
