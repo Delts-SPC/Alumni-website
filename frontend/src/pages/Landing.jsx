@@ -151,7 +151,7 @@ export default function Landing() {
           </div>
           <div className="md:col-span-7 md:pl-8 lg:pl-12">
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight text-slate-900 leading-tight mb-6">
-              This is about where you are right now.
+              We want to hear from you - help shape our programs
             </h2>
             <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-3">
               Most of us are navigating something. And most of the time, we're figuring it out alone.
