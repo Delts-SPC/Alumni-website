@@ -236,7 +236,7 @@ export default function SpecificChallengeDialog({ open, onOpenChange }) {
                 {APPROACHES.map((a) => (
                   <label
                     key={a.id}
-                    className="flex items-center gap-2 text-sm text-slate-700 border border-slate-200 px-3 py-2 rounded-sm hover:border-[#6B2C91] cursor-pointer"
+                    className={`flex items-center gap-2 text-sm text-slate-700 border border-slate-200 px-3 py-2 rounded-sm hover:border-[#6B2C91] cursor-pointer ${a.id === "virtual" ? "col-start-1 mt-2" : ""} ${a.id === "in_person" ? "mt-2" : ""}`}
                   >
                     <Checkbox
                       checked={form.approaches.includes(a.id)}
