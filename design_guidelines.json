@@ -1,0 +1,136 @@
+{
+  "theme": "LIGHT",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) adapted for High-End Professional Services",
+  "brand": {
+    "name": "Delt Alumni Excellence Center",
+    "audience": "Mid-career to senior professional men, ages 30-65",
+    "tone": "Independent, professional, trustworthy, dignified, high-end firm. Avoid collegiate, fundraising, or trendy aesthetics.",
+    "footer_text": "Built by Delts. Supported by Delts. Independent from expectations. Focused on your next chapter."
+  },
+  "typography": {
+    "primary_font": "Playfair Display",
+    "primary_font_type": "serif",
+    "secondary_font": "IBM Plex Sans",
+    "secondary_font_type": "sans-serif",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none text-slate-900 font-serif",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight text-slate-900 font-serif",
+      "h3": "text-xl sm:text-2xl text-slate-800 font-sans font-medium",
+      "body": "text-base text-slate-600 font-sans leading-relaxed",
+      "small": "text-sm text-slate-500 font-sans",
+      "overline": "text-xs tracking-[0.2em] uppercase font-sans text-[#6B2C91] font-semibold"
+    }
+  },
+  "colors": {
+    "primary": "#6B2C91",
+    "primary_hover": "#562374",
+    "background": "#FFFFFF",
+    "surface": "#F8F9FA",
+    "surface_alt": "#F1F5F9",
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "muted": "#94A3B8"
+    },
+    "border": "#E2E8F0"
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12 lg:px-24",
+    "section_padding": "py-24 md:py-32",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12",
+    "philosophy": "Generous spacing. Overlap elements slightly to break the corporate grid. Provide visual breathing room for mature audience."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#6B2C91] hover:bg-[#562374] text-white font-sans font-medium px-8 py-4 rounded-none transition-colors shadow-sm hover:shadow-md",
+      "secondary": "bg-transparent border border-slate-300 hover:border-[#6B2C91] hover:text-[#6B2C91] text-slate-900 font-sans font-medium px-8 py-4 rounded-none transition-colors"
+    },
+    "cards": "bg-white border border-slate-100 p-8 shadow-sm hover:shadow-md transition-shadow",
+    "forms": "Shadcn UI forms. Use sharp or slightly rounded corners (rounded-sm maximum). Active focus rings must be subtle #6B2C91. Frictionless, conversational.",
+    "modals": "Centered Shadcn Dialogs. Must include 'X' or 'Cancel' to exit. Multi-step forms inside must include visual progress indicators (e.g., Step 1 of 3 or a progress bar)."
+  },
+  "pages": {
+    "landing": {
+      "sections": [
+        {
+          "name": "Above the Fold / Hero",
+          "layout": "Asymmetric bento. Large typography dominating the left. Subtle background image or minimal clean architecture on the right.",
+          "copy": "The Brotherhood shaped part of who you became. Now it's here for who you're becoming next.",
+          "cta": "Find your path"
+        },
+        {
+          "name": "Info Gathering",
+          "layout": "Centered alignment, elegant typography. Lots of negative space.",
+          "copy": "WE WANT TO HEAR FROM YOU – HELP SHAPE OUR PROGRAMS",
+          "cta": "Make my voice matter"
+        },
+        {
+          "name": "Specific Challenge",
+          "layout": "Two column bento (5 cols image, 7 cols text with massive left padding).",
+          "copy": "Is there something you're trying to resolve right now?",
+          "cta": "Share your situation",
+          "action": "Opens Specific Challenge Popup Form"
+        },
+        {
+          "name": "Affirmation & Email Capture",
+          "layout": "Full width dark slate section (bg-slate-900). White text. Inline email capture form.",
+          "copy": "Brotherhood for the life you're building now.",
+          "cta": "Be one of the first to know"
+        },
+        {
+          "name": "Expertise to Share",
+          "layout": "Two column inverted bento (7 cols text, 5 cols image).",
+          "copy": "Could your experience help another Brother?",
+          "cta": "Share your experience",
+          "action": "Opens Expertise Popup Form"
+        },
+        {
+          "name": "Pillars",
+          "layout": "4-column strict grid. Minimalist icons (lucide-react). Categories: Work + Career, Management + Leadership, Life + Personal, Self-employment.",
+          "cta": "Choose your path"
+        },
+        {
+          "name": "Footer",
+          "layout": "Massive py-24 padding. Dark background (slate-950), subtle #6B2C91 top border.",
+          "text": "Built by Delts. Supported by Delts. Independent from expectations. Focused on your next chapter."
+        }
+      ]
+    },
+    "admin": {
+      "login_path": "/login",
+      "dashboard_path": "/dashboard",
+      "description": "Simple, professional admin login. Dashboard features a data table (Shadcn Table) to view collected alumni data with basic filters and pagination."
+    }
+  },
+  "media": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1755474897404-006834b70103?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwyfHxnbGFzcyUyMG9mZmljZSUyMGJ1aWxkaW5nJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzc3ODYwNjQ2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern architectural interior with glass and steel. Use as a background with a heavy white/light-gray overlay (e.g. bg-white/90) to ensure text readability.",
+      "category": "hero"
+    },
+    "specific_challenge_image": {
+      "url": "https://images.unsplash.com/photo-1739285452621-59d92842fcc8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBtZW4lMjBtZWV0aW5nJTIwb2ZmaWNlfGVufDB8fHx8MTc3Nzg2MDY0MHww&ixlib=rb-4.1.0&q=85",
+      "description": "A group of professional men shaking hands in a room. Use in the 'Specific Challenge' section to signify connection.",
+      "category": "content"
+    },
+    "expertise_share_image": {
+      "url": "https://images.unsplash.com/photo-1758519288955-1b3b45209c7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBtZW4lMjBtZWV0aW5nJTIwb2ZmaWNlfGVufDB8fHx8MTc3Nzg2MDY0MHww&ixlib=rb-4.1.0&q=85",
+      "description": "Two professional men collaborating. Use for 'Expertise to Share' section.",
+      "category": "content"
+    }
+  },
+  "icons_library": "lucide-react",
+  "testing": {
+    "requirements": "All interactive elements and inputs MUST include 'data-testid' attributes (e.g., data-testid='hero-cta-button', data-testid='challenge-popup-step-1')."
+  },
+  "instructions_to_main_agent": [
+    "Install and use 'lucide-react' for icons.",
+    "Do not use default generic templates. Use 'Playfair Display' for Headings and 'IBM Plex Sans' for body to convey a high-end professional services firm.",
+    "Use '#6B2C91' sparingly—only for primary buttons, active links, or subtle decorative borders.",
+    "Ensure the two popup forms are implemented as centered Shadcn Dialogs and include a progress indicator.",
+    "Implement the landing page at '/' and the admin interface at '/login' and '/dashboard'.",
+    "Remember to include the exact footer text: 'Built by Delts. Supported by Delts. Independent from expectations. Focused on your next chapter.'",
+    "Never use placeholder images (like via.placeholder.com). Strictly use the provided 'media' URLs.",
+    "In the admin data table, provide a clear, professional presentation of the structured data (filters/pagination)."
+  ]
+}
