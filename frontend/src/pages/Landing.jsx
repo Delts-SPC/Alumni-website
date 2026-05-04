@@ -150,6 +150,9 @@ export default function Landing() {
             </div>
           </div>
           <div className="md:col-span-7 md:pl-8 lg:pl-12">
+                      <p className="text-xs tracking-[0.25em] uppercase text-[#6B2C91] font-semibold mb-6">
+              Your voice matters
+            </p>  
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl tracking-tight text-slate-900 leading-tight mb-6">
               We want to hear from you - help shape our programs
             </h2>
