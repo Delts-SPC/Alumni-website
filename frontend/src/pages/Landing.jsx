@@ -160,9 +160,9 @@ export default function Landing() {
               Most of us are navigating something. Often, we're figuring it out alone — no structure, no real support, no place to talk about it with people who actually understand.
             </p>
 
-            <h3 className="font-serif text-xl md:text-2xl text-slate-900 leading-tight mt-8 mb-3">
+            <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-3">
               What if that changed? We're building programs designed to help you move forward in what actually matters right now.
-            </h3>
+            </p>
             <p className="text-base md:text-lg text-slate-700 leading-relaxed mb-8">
               But before we build anything, we need to understand where you are.
             </p>
