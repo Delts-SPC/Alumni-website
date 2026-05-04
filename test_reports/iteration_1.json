@@ -1,0 +1,39 @@
+{
+  "summary": "First iteration frontend+integration testing of DAEC Phase 1 landing page, three popup forms, admin login, and dashboard. 12 Playwright flow tests executed against production URL — all 12 passed (landing sections, footer text, Hero CTAs, all 3 dialogs with validation + multi-step nav + Supabase submission, /dashboard auth protection, login invalid/valid, logout, 375px mobile no horizontal scroll). Supabase REST API was verified directly via curl — alumni_profiles, engagement_entries, priorities, expertise all received writes correctly. However a real Dashboard data-display bug was uncovered: the consent table is queried with ORDER BY created_at but the column is named `timestamp`, causing HTTP 400 that is silently swallowed so the Consents stat card always reads 0 and the Consent tab always shows 'No records yet.' even though consent rows are being written on every form submission.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [
+      {
+        "component": "Dashboard / lib/db.js:fetchTable",
+        "issue": "fetchTable('consent') calls .order('created_at') but the consent table has no created_at column (only 'timestamp'). Supabase returns HTTP 400 (PostgREST 42703: column consent.created_at does not exist). Error is swallowed by Dashboard's .catch(() => []) so the Consents stat card always shows 0 and the Consent tab always renders 'No records yet.' — admin cannot see consent data even though rows are being inserted successfully.",
+        "selector": "[data-testid=\"stat-Consents\"] / [data-testid=\"tab-consent\"]",
+        "priority": "HIGH"
+      }
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [
+    "In /app/frontend/src/lib/db.js fetchTable(), special-case the consent table to order by 'timestamp' instead of 'created_at' (e.g. const orderCol = table === 'consent' ? 'timestamp' : 'created_at'; .order(orderCol, { ascending: false })). Alternatively, add a created_at column to the consent table in Supabase. After fix, verify Consents stat card shows the correct count and Consent tab renders rows.",
+    "(Optional) Remove or reduce the .catch(() => []) swallow in Dashboard.load() so 400s surface as a toast — would have caught this bug at dev time."
+  ],
+  "critical_code_review_comments": [
+    "Silent error swallowing in Dashboard.jsx load() — TABS.map((t) => fetchTable(t.key).catch(() => [])) hides Supabase errors entirely; should at least console.warn the failing table name.",
+    "db.js:fetchTable hardcodes created_at ordering but schema is not uniform across tables (consent uses timestamp). Either normalise the schema or pass the order column per table.",
+    "auth.js uses sessionStorage + plain env-var compare on the client — acceptable for Phase 1 per spec, but every user with DevTools can read REACT_APP_ADMIN_PASSWORD from the bundled JS. Flag for Phase 2 to move admin auth behind Supabase Auth or a real backend.",
+    "EmailCaptureDialog step-1 Continue validates email is present but not that it looks like an email — users can advance with 'x' and then Supabase will still accept it (no format check). Minor UX, not blocking.",
+    "fetchTable uses limit=500 which will silently cap admin views once data grows — consider pagination or at least surface a 'showing first 500' hint."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "n/a (no backend — frontend-to-Supabase direct)", "frontend": "100% on executed flows (12/12)"},
+  "test_credentials": "info@spc-cpf.com / testpassword (from /app/memory/test_credentials.md) — login verified working",
+  "seed_data_creation": "Created 3 test alumni in live Supabase via the forms: test_voice@example.com (Test Voice), test_challenge@example.com (TestFN TestLN), test_expertise@example.com (TestExp User). Also 3 engagement_entries, 1 priorities row, 1 expertise row, 3 consent rows. Main agent may want to delete these after verifying or they'll show up in the Dashboard.",
+  "retest_needed": true,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "All three popup forms (EmailCapture 2-step, SpecificChallenge 4-step, ShareExpertise 4-step with dynamic add/remove) have correct data-testid coverage and submit successfully to Supabase. Verified via curl against mhjteloqyzavtjdrvesz.supabase.co REST endpoint — writes land in alumni_profiles/engagement_entries/priorities/expertise/consent as expected. Auth protection works (sessionStorage key daec_admin_session_v1). The single real bug is the consent-ordering column mismatch in lib/db.js fetchTable. After main agent fixes, re-run only the login_dashboard_logout flow and verify Consents stat card shows >0 and the Consent tab renders rows. Test seed data listed above — can be cleaned up or left in place.",
+  "rca of the issue": "Root cause: Supabase schema inconsistency — consent table uses `timestamp` column for insert time while all other tables use `created_at`. The generic fetchTable() in /app/frontend/src/lib/db.js issues .from(table).select('*').order('created_at', { ascending: false }) for every table, so PostgREST returns 400 with {code:'42703', message:'column consent.created_at does not exist'}. Dashboard.jsx line ~230 wraps each fetchTable in .catch(() => []) causing the error to be invisible. Reproduction: login to /dashboard, open network tab, observe GET /rest/v1/consent?...order=created_at.desc returns 400; Consents stat reads 0 and Consent tab reads 'No records yet.'. Confirmed via direct curl that consent rows exist. Mitigation: change db.js to orderCol = (table==='consent') ? 'timestamp' : 'created_at', or add created_at column to consent table, or rename timestamp->created_at in schema."
+}
