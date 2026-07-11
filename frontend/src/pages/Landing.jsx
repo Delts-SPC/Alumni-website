@@ -13,7 +13,7 @@ const VOICE_IMG =
 const CHALLENGE_IMG =
   "https://customer-assets.emergentagent.com/job_affirmation-1/artifacts/g58b97nj_AdobeStock_194166236%20medres%20crop.jpg";
 const EXPERTISE_IMG =
-  "https://images.unsplash.com/photo-1754531976828-69e42ce4e0d9?fm=jpg&q=85&w=1200&fit=crop";
+  "https://customer-assets.emergentagent.com/job_affirmation-1/artifacts/a64ojgnw_AdobeStock_418748339%20medres%20crop.jpg";
 
 const PILLARS = [
   {
