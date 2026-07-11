@@ -11,7 +11,7 @@ const HERO_IMG =
 const VOICE_IMG =
   "https://customer-assets.emergentagent.com/job_affirmation-1/artifacts/az5smpcl_AdobeStock_203971579%20medres%20crop.jpg";
 const CHALLENGE_IMG =
-  "https://images.unsplash.com/photo-1677594332964-b1199e6e7928?fm=jpg&q=85&w=1200&fit=crop";
+  "https://customer-assets.emergentagent.com/job_affirmation-1/artifacts/g58b97nj_AdobeStock_194166236%20medres%20crop.jpg";
 const EXPERTISE_IMG =
   "https://images.unsplash.com/photo-1754531976828-69e42ce4e0d9?fm=jpg&q=85&w=1200&fit=crop";
 
