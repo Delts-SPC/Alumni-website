@@ -9,7 +9,7 @@ import Footer from "@/components/landing/Footer";
 const HERO_IMG =
   "https://images.unsplash.com/photo-1755474897404-006834b70103?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwyfHxnbGFzcyUyMG9mZmljZSUyMGJ1aWxkaW5nJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzc3ODYwNjQ2fDA&ixlib=rb-4.1.0&q=85";
 const VOICE_IMG =
-  "https://images.unsplash.com/photo-1758691736975-9f7f643d178e?fm=jpg&q=85&w=1200&fit=crop";
+  "https://customer-assets.emergentagent.com/job_affirmation-1/artifacts/az5smpcl_AdobeStock_203971579%20medres%20crop.jpg";
 const CHALLENGE_IMG =
   "https://images.unsplash.com/photo-1677594332964-b1199e6e7928?fm=jpg&q=85&w=1200&fit=crop";
 const EXPERTISE_IMG =
