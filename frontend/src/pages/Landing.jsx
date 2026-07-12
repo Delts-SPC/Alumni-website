@@ -66,7 +66,7 @@ export default function Landing() {
               Δ
             </div>
             <span className="text-xs tracking-[0.25em] uppercase font-semibold text-slate-700">
-              RAH Delt
+              Delt For Life
             </span>
           </div>
           <button
@@ -108,7 +108,7 @@ export default function Landing() {
               Many Delts carry the Brotherhood with them well after graduation and apply the
               skills they learned as they enter their preferred industries. But career moves,
               leadership pressure, family life, personal growth, and self-employment are often
-              navigated alone. RAH Delt exists to change that — offering
+              navigated alone. Delt For Life exists to change that — offering
               support and guidance.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -237,7 +237,7 @@ export default function Landing() {
             Brotherhood for the life you're building now.
           </h2>
           <p className="text-base md:text-lg text-slate-300 leading-relaxed mb-10">
-            RAH Delt is a Delt alumni-led, independently operated
+            Delt For Life is a Delt alumni-led, independently operated
             initiative designed to help Brothers keep advancing through work, leadership, life,
             and self-employment — with practical support, trusted circles, and no strings
             attached.

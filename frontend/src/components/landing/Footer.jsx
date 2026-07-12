@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <p className="text-xs tracking-[0.25em] uppercase text-[#C8A6E0] font-medium mb-4">
-              RAH Delt
+              Delt For Life
             </p>
             <h3 className="font-serif text-2xl md:text-3xl text-white leading-snug">
               Built by Delts. Supported by Delts.
@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between gap-4 text-xs text-slate-500">
-          <span>© {new Date().getFullYear()} RAH Delt</span>
+          <span>2026 Copyright Delt For Life, a Strengths Performance Centre program. All rights reserved.</span>
         </div>
       </div>
     </footer>

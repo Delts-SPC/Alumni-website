@@ -268,7 +268,7 @@ export default function Dashboard() {
               <p className="text-xs tracking-[0.2em] uppercase text-slate-500 font-semibold">
                 Admin Dashboard
               </p>
-              <h1 className="font-serif text-xl text-slate-900">RAH Delt</h1>
+              <h1 className="font-serif text-xl text-slate-900">Delt For Life</h1>
             </div>
           </div>
           <div className="flex items-center gap-2">
