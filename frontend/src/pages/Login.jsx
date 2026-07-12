@@ -39,7 +39,7 @@ export default function Login() {
         </div>
         <h1 className="font-serif text-3xl text-slate-900 mb-2">Sign in</h1>
         <p className="text-sm text-slate-500 mb-8">
-          Delt Alumni Excellence Center — administrative access.
+          RAH Delt — administrative access.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
